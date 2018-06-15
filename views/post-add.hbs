@@ -1,0 +1,16 @@
+<h1>{{#if isEditing }}Edit post{{ else }}Add new post{{/ if}}</h1>
+
+<form action="/posts?_method=PUT" method="POST">
+
+    <p>
+        <label for="Title">Title</label>
+        <input type="text" name="Title" id="Title" value="{{post.Title}}" />
+    </p>
+    <p>
+        <label for="Description">Description</label>
+        <textarea name="Description" id="Description">{{post.Description}}</textarea>
+    </p>
+    <input type="hidden" name="PostId" value="1">
+    <input type="hidden" name="UserId" value="{{post.PostId}}">
+    <input type="submit" value="Save">
+</form>

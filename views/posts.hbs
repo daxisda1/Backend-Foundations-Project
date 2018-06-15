@@ -1,0 +1,19 @@
+<h1>POsts page</h1>
+<div class="container">
+    <div class="row">
+    {{# each posts}}
+    <div class="col-md-4">
+        <div class="card">
+            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{Title}}</h5>
+                <p class="card-text">{{Description}}</p>
+                <a href="/posts/edit/{{PostId}}" class="btn btn-primary">Edit</a>
+                <a href="/posts/delete/{{PostId}}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</row>
+</div>
+
